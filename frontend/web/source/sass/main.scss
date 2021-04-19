@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+// 2. Vendors
+@import 'vars/fonts',
+'vendor/my-bootstrap/main';
+
+@import 'vars/colors',
+'vars/img',
+'vars/icons',
+'vars/config';
+
+@import 'abstract/functions',
+'abstract/mixins';
+
+@import 'style/callout',
+'style/base',
+'style/media';
+
+.a {
+  color: blue;
+}
