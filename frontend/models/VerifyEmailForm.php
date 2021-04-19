@@ -50,7 +50,7 @@ class VerifyEmailForm extends Model
         $user->status = User::STATUS_ACTIVE;
 
         $auth = Yii::$app->authManager;
-        $role = $auth->getRole(User::ROLE_PREMIUM);
+        $role = $auth->getRole(User::ROLE_USER);
 
         return ($auth->assign($role, $user->id) && $user->save(false)) ? $user : null;
     }
