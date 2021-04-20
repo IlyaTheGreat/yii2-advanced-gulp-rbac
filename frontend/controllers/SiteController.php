@@ -14,6 +14,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use yii\web\Response;
 
 /**
  * Site controller
@@ -80,7 +81,7 @@ class SiteController extends Controller
     /**
      * Logs in a user.
      *
-     * @return string|\yii\web\Response
+     * @return string|Response
      */
     public function actionLogin()
     {
@@ -103,9 +104,9 @@ class SiteController extends Controller
     /**
      * Logs out the current user.
      *
-     * @return \yii\web\Response
+     * @return Response
      */
-    public function actionLogout(): \yii\web\Response
+    public function actionLogout(): Response
     {
         Yii::$app->user->logout();
 
@@ -115,7 +116,7 @@ class SiteController extends Controller
     /**
      * Displays contact page.
      *
-     * @return string|\yii\web\Response
+     * @return string|Response
      */
     public function actionContact()
     {
@@ -216,10 +217,10 @@ class SiteController extends Controller
      * Verify email address
      *
      * @param string $token
-     * @return yii\web\Response
+     * @return Response
      *@throws BadRequestHttpException
      */
-    public function actionVerifyEmail(string $token): Yii\web\Response
+    public function actionVerifyEmail(string $token): Response
     {
         try {
             $model = new VerifyEmailForm($token);
@@ -240,7 +241,7 @@ class SiteController extends Controller
     /**
      * Resend verification email
      *
-     * @return string|\yii\web\Response
+     * @return string|Response
      */
     public function actionResendVerificationEmail()
     {
