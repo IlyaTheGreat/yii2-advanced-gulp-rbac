@@ -176,7 +176,7 @@ php init
    <p>Заменить содержимое файла common/config/main-local.php на /common/config/main-local.php.example</p>
    <p>Заполнить поля db, mailer актуальными данными</p>
 
-<h3>4) Установка миграций</h3>
+<h3>4) Применение миграций</h3>
 
 ```
 php yii migrate --migrationPath=@mdm/admin/migrations
@@ -202,11 +202,10 @@ sudo apt-get install nodejs
 
 sudo apt-get install npm
 
-npm install --global gulp
+npm install --global gulp@^3.9.1
 
 # Разворачиваем ноду в корне проекта
 npm init #все вопросы можно пропустить
-npm install gulp@^3.9.1
 
 #если появятся ошибки, выполнить:
 npm install

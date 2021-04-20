@@ -103,9 +103,6 @@ gulp.task('hello', function() {
 });
 
 //Полная компиляция. (запуск из консоли - gulp)
-gulp.task('default', [
-  'front:compileSass',
-  'front:compileJs'
-], function() {
+gulp.task('default', ['front:compileSass', 'front:compileJs'], function() {
   console.log('*** OK ***');
 });

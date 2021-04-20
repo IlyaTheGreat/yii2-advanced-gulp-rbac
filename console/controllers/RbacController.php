@@ -20,12 +20,12 @@ class RbacController extends Controller
 
         // Create roles
         $user    = $authManager->createRole('user');
-        $manager = $authManager->createRole('premium');
+        $premium = $authManager->createRole('premium');
         $admin   = $authManager->createRole('admin');
 
         try {
             $authManager->add($user);
-            $authManager->add($manager);
+            $authManager->add($premium);
             $authManager->add($admin);
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
