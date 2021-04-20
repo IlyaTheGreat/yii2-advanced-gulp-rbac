@@ -70,6 +70,7 @@ environments/            contains environment-based overrides
 </ol>
 
 <h4>Установка php7.4</h4>
+
 ```
 sudo apt install php7.4
 sudo apt install php7.4-fpm
@@ -95,12 +96,14 @@ sudo apt install php7.4-zip
 ```
 
 <h4>Установка nginx</h4>
+
 ```
 sudo apt install nginx-full
 sudo vim /etc/nginx/sites-available/frontend
 ```
 
 В шаблон default вставляем следующий конфиг:
+
 ```
 server {
         listen 80;
@@ -132,6 +135,7 @@ server {
 ```
 
 Аналогичный конфиг прописываем для backend, затем выполняем:
+
 ```
 sudo ln /etc/nginx/sites-available/frontend /etc/nginx/sites-enabled/
 sudo ln /etc/nginx/sites-available/backend /etc/nginx/sites-enabled/
@@ -139,6 +143,7 @@ sudo service nginx restart
 ```
 
 <h4>Установка PostgreSQL</h4>
+
 ```
 # Установка
 sudo apt install postgresql postgresql-contrib
@@ -154,6 +159,7 @@ exit
 ```
 
 <h3>1) Скачать проект из github</h3>
+
 ```
 #Инициализируем пустой репозиторий
 git init
